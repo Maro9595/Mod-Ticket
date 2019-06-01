@@ -20,6 +20,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
+if (message.author.bot) return undefined; 
   if (message.content.toLowerCase().startsWith(prefix + `help`)) {
     const embed = new Discord.RichEmbed()
     .setTitle(`:mailbox_with_mail: Vulnix Help`)
